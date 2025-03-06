@@ -64,7 +64,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(doubleNumbers)
-*/
+
 
 // using the map method
 
@@ -72,6 +72,7 @@ const numbers = [1, 2, 3, 4, 5]
 const doubleNumbers = numbers.map(number => number * 2)
 
 console.log(doubleNumbers)
+*/
 
 const backpackFullOfAmmo = [
     { item: 'bullets', quantity: 10, priceEa: 0.5 },
@@ -89,3 +90,19 @@ const totalValue = backpackFullOfAmmo.map((ammo) => {
 })
 
 console.log(totalValue)
+
+const numbers = [1, 2, 3, 4, 5]
+
+const doubledNumbers = numbers.map((number) => `<li>${number * 2}</li>`)
+
+console.log(doubledNumbers.join('\n'))
+
+const tableRows = backpackFullOfAmmo.map((ammo) => {
+    return `<tr>
+    <td>${ammo.name}</td>
+    <td>${ammo.quantity}</td>
+    <td>${ammo.priceEa}</td>
+  </tr>`
+}).join('\n')
+
+console.log(tableRows)
