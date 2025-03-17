@@ -80,3 +80,13 @@ const firstPlayerWithMoreFragsThanDeaths = players.find((player) => player.frags
 
 console.log(firstPlayerWithMoreFragsThanDeaths)
 
+// Some method example
+
+const hasOddNumber = numbers.some((number) => number % 2)
+
+console.log(hasOddNumber)
+
+const hasFrags = players.some((player) => player.frags)
+
+console.log(hasFrags)
+
