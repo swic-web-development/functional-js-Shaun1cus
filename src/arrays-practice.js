@@ -90,3 +90,12 @@ const hasFrags = players.some((player) => player.frags)
 
 console.log(hasFrags)
 
+// Every method example
+
+const allNumbersAreOdd = numbers.every((number) => number % 2)
+
+console.log(allNumbersAreOdd) 
+
+const allPlayersHaveMoreFragsThanDeaths = players.every((player) => player.frags > player.deaths)
+
+console.log(allPlayersHaveMoreFragsThanDeaths)
