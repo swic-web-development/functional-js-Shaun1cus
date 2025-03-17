@@ -112,4 +112,59 @@ const monsters = [
     }, 0);
 
     console.log(totalHealth);
+
+// 4. Use the sort method to arrange the monsters from highest damage to lowest.
+
+    /*
+    Think like a developer:
+    1. Look at the Cacodemon's damage, 35, and the Baron of Hell's damage, 45. Since 35 is less than 45, we need to swap them.  a <==> b
+    2. Now, compare the Cacodemon's damage, 35, to the Cyberdemon's damage, 125, Since 35 is less than 125, we need to swap them. a <==> c
+       a. Now we look at the Cyberdemon's damage, 125, compared to the Baron of Hell's damage, 45. Since 45 is less than 125, we need to swap them. c <==> b
+
+     At this point, the order of the first three monsters is Cyberdemon (125), Baron of Hell (45), and Cacodemon (35).
+
+    3. Look at the Hell Knight's damage, 25, and the Cacodemon's damage, 35. Since 25 is less than 35, we don't need to swap them.
+    4. Look at the Imp's damage, 20, and the Hell Knight's damage, 25. Since 20 is less than 25, we don't need to swap them.
+    5. Look at the Lost Soul's damage, 10, and the Imp's damage, 20. Since 10 is less than 20, we don't need to swap them.
+
+     At this point, the order of the first six monsters is Cyberdemon (125), Baron of Hell (45), Cacodemon (35), Hell Knight (25), Imp (20), and Lost Soul (10).
+
+    6. Look at the Pinky's damage, 15, and the Lost Soul's damage, 10. Since 15 is greater than 10, we need to swap them.
+       a. Now we need to look at the Pinky's damage, 15, and the Imp's damage, 20. Since 15 is less than 20, we don't need to swap them.
+    7. Look at the Revenant's damage, 30, and the Lost Soul's damage, 10. Since 30 is greater than 10, we need to swap them.
+       a. Now we need to look at the Revenant's damage, 30, and the Pinky's damage, 15. Since 30 is greater than 15, we need to swap them.
+       b. Now we need to look at the Revenant's damage, 30, and the Imp's damage, 20. Since 30 is greater than 20, we need to swap them.
+       c. Now we need to look at the Revenant's damage, 30, and the Hell Knight's damage, 25. Since 30 is greater than 25, we need to swap them.
+       d. Now we need to look at the Revenant's damage, 30, and the Cacodemon's damage, 35. Since 30 is less than 35, we don't need to swap them.
+    8. Look at the Spectre's damage, 20, and the Lost Soul's damage, 10. Since 20 is greater than 10, we need to swap them.
+       a. Now we need to look at the Spectre's damage, 20, and the Pinky's damage, 15. Since 20 is greater than 15, we need to swap them.
+       b. Now we need to look at the Spectre's damage, 20, and the Imp's damage, 20. Since 20 is equal to 20, we don't need to swap them.
+
+     At this point, the order of the first nine monsters is Cyberdemon (125), Baron of Hell (45), Cacodemon (35), Revenant (30), Hell Knight (25), Imp (20), Spectre (20), Pinky (15), and Lost Soul (10).
+
+    9. Look at the Spider Mastermind's damage, 50, and the Lost Soul's damage, 10. Since 50 is greater than 10, we need to swap them.
+       a. Now we need to look at the Spider Mastermind's damage, 50, and the Pinky's damage, 15. Since 50 is greater than 15, we need to swap them.
+       b. Now we need to look at the Spider Mastermind's damage, 50, and the Spectre's damage, 20. Since 50 is greater than 20, we need to swap them.
+       c. Now we need to look at the Spider Mastermind's damage, 50, and the Imp's damage, 20. Since 50 is greater than 20, we need to swap them.
+       d. Now we need to look at the Spider Mastermind's damage, 50, and the Hell Knight's damage, 25. Since 50 is greater than 25, we need to swap them.
+       e. Now we need to look at the Spider Mastermind's damage, 50, and the Revenant's damage, 30. Since 50 is greater than 30, we need to swap them.
+       f. Now we need to look at the Spider Mastermind's damage, 50, and the Cacodemon's damage, 35. Since 50 is greater than 35, we need to swap them.
+       g. Now we need to look at the Spider Mastermind's damage, 50, and the Baron of Hell's damage, 45. Since 50 is greater than 45, we need to swap them.
+       h. Now we need to look at the Spider Mastermind's damage, 50, and the Cyberdemon's damage, 125. Since 50 is less than 125, we don't need to swap them.
+
+    10. Look at the Vile's damage, 40, and the Lost Soul's damage, 10. Since 40 is greater than 10, we need to swap them.
+       a. Now we need to look at the Vile's damage, 40, and the Pinky's damage, 15. Since 40 is greater than 15, we need to swap them.
+       b. Now we need to look at the Vile's damage, 40, and the Spectre's damage, 20. Since 40 is greater than 20, we need to swap them.
+       c. Now we need to look at the Vile's damage, 40, and the Imp's damage, 20. Since 40 is greater than 20, we need to swap them.
+       d. Now we need to look at the Vile's damage, 40, and the Hell Knight's damage, 25. Since 40 is greater than 25, we need to swap them.
+       e. Now we need to look at the Vile's damage, 40, and the Revenant's damage, 30. Since 40 is greater than 30, we need to swap them.
+       f. Now we need to look at the Vile's damage, 40, and the Cacodemon's damage, 35. Since 40 is greater than 35, we need to swap them.
+       g. Now we need to look at the Vile's damage, 40, and the Baron of Hell's damage, 45. Since 40 is less than 45, we don't need to swap them.
     
+    11. Look at the Zombie's damage, 5, and the Lost Soul's damage, 10. Since 5 is less than 10, we don't need to swap them.
+    12. Look at the Zombieman's damage, 10, and the Zombie's damage, 5. Since 10 is greater than 5, we need to swap them.
+       a. Now we need to look at the Zombieman's damage, 10, and the Lost Soul's damage, 10. Since 10 is equal to 10, we don't need to swap them.
+    */
+
+    const sortedMonsters = monsters.sort((a, b) => b.damage - a.damage);
+    console.log(sortedMonsters);
