@@ -84,3 +84,15 @@ const monsters = [
 
     const monsterNames = monsters.map(monster => monster.name);
     console.log(monsterNames);
+
+// 2. Use the filter method to find all monsters with health greater than 150.
+
+  /*
+  Think like a developer:
+  1. Look at the health of the first monster: 400, which is obviously greater than 150. Add it to the new array.
+  2. Look at the health of the second monster: 1000, which is greater than 150. Add it to the new array.
+  3. Continue this process for each monster in the array.
+  */
+
+    const highHealthMonsters = monsters.filter(monster => monster.health > 150);
+    console.log(highHealthMonsters);
