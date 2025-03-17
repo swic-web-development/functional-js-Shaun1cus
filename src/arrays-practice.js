@@ -69,3 +69,14 @@ console.log(totalFrags)
 const totalFragsImplicit = players.reduce((total, player) => total + player.frags, 0)
 
 console.log(totalFragsImplicit)
+
+// Find method example
+
+const firstOddNumber = numbers.find((number) => number % 2)
+
+console.log(firstOddNumber)
+
+const firstPlayerWithMoreFragsThanDeaths = players.find((player) => player.frags > player.deaths)
+
+console.log(firstPlayerWithMoreFragsThanDeaths)
+
