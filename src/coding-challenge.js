@@ -96,3 +96,20 @@ const monsters = [
 
     const highHealthMonsters = monsters.filter(monster => monster.health > 150);
     console.log(highHealthMonsters);
+
+// 3. Use the reduce method to calculate the total health of all monsters.
+
+  /*
+  Think like a developer:
+  1. Look at the health of the first monster: 400, and add it to the accumulator.
+  2. Look at the health of the second monster: 1000, and add it to the accumulator.
+  3. Continue this process for each monster in the array.
+  4. Add the total health of all monsters.
+  */
+
+    const totalHealth = monsters.reduce((accumulator, monster) => {
+        return accumulator + monster.health;
+    }, 0);
+
+    console.log(totalHealth);
+    
