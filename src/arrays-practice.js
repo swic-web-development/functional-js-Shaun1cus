@@ -1,5 +1,6 @@
 // Imperative example
 
+/* 
 const numbers = [1, 2, 3, 4, 5]
 const doubled = []
 
@@ -8,6 +9,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(doubled);
+*/
 
 // Declarative example
 
@@ -15,3 +17,31 @@ const numbersDeclarative = [1, 2, 3, 4, 5]
 const doubledDeclarative = numbersDeclarative.map(number => number * 2)
 
 console.log(doubledDeclarative);
+
+// Filter method example
+
+const numbers = [1, 2, 3, 4, 5]
+const oddNumbers = numbers.filter((number) => number % 2)
+
+console.log(oddNumbers)
+
+const players = [
+    { name: 'DoomGuy', frags: 25, deaths: 0 },
+    { name: 'Slayer', frags: 25, deaths: 1 },
+    { name: 'Marine', frags: 12, deaths: 15 },
+    { name: 'Noob', frags: 0, deaths: 25 },
+]
+
+const playersWithMoreFragsThanDeaths = players.filter((player) => {
+    // Additional `console.log` for clarity.
+    console.log(`We are now looking at this player: ${player.name}`)
+
+    return player.frags > player.deaths
+})
+
+console.log(playersWithMoreFragsThanDeaths)
+
+// We can shorten that filter with implicit return:
+const playersWMFTD = players.filter((player) => player.frags > player.deaths)
+
+console.log(playersWMFTD)
