@@ -20,10 +20,12 @@ console.log(doubledDeclarative);
 
 // Filter method example
 
+/*
 const numbers = [1, 2, 3, 4, 5]
 const oddNumbers = numbers.filter((number) => number % 2)
 
 console.log(oddNumbers)
+*/
 
 const players = [
     { name: 'DoomGuy', frags: 25, deaths: 0 },
@@ -31,6 +33,7 @@ const players = [
     { name: 'Marine', frags: 12, deaths: 15 },
     { name: 'Noob', frags: 0, deaths: 25 },
 ]
+
 
 const playersWithMoreFragsThanDeaths = players.filter((player) => {
     // Additional `console.log` for clarity.
@@ -45,3 +48,24 @@ console.log(playersWithMoreFragsThanDeaths)
 const playersWMFTD = players.filter((player) => player.frags > player.deaths)
 
 console.log(playersWMFTD)
+
+// Reduce method example
+
+const numbers = [1, 2, 3, 4, 5]
+const sum = numbers.reduce((accumulator, currentValue) => {
+    console.log(`Accumulator: ${accumulator}, Current value: ${currentValue}`)
+
+    return accumulator + currentValue
+}, 0)
+
+console.log(sum)
+
+const totalFrags = players.reduce((total, player) => {
+    return total + player.frags
+}, 0)
+console.log(totalFrags)
+
+// Again, we can shorten that with implicit return:
+const totalFragsImplicit = players.reduce((total, player) => total + player.frags, 0)
+
+console.log(totalFragsImplicit)
