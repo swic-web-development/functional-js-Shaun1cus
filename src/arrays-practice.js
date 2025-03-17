@@ -99,3 +99,22 @@ console.log(allNumbersAreOdd)
 const allPlayersHaveMoreFragsThanDeaths = players.every((player) => player.frags > player.deaths)
 
 console.log(allPlayersHaveMoreFragsThanDeaths)
+
+// Sort method example
+
+const sortedNumbers = numbers.sort((a, b) => a - b)
+console.log(sortedNumbers)
+
+const numbersSort = [5, 3, 8, 1, 2]
+
+const sortedNumbersSort = numbersSort.sort((a, b) => {
+    console.log(`Now comparing a: ${a}, b: ${b}`)
+
+    return a - b
+})
+
+console.log(sortedNumbersSort)
+
+const sortedPlayers = players.sort((a, b) => b.frags - a.frags)
+
+console.log(sortedPlayers)
